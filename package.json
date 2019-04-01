@@ -1,0 +1,37 @@
+{
+  "name": "StartRepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp serve",
+    "build": "gulp runsec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZSavich/StartGulp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZSavich/StartGulp/issues"
+  },
+  "homepage": "https://github.com/ZSavich/StartGulp#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-svgmin": "^2.1.0",
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {
+    "del": "^4.0.0"
+  }
+}
