@@ -13,6 +13,8 @@
    width: 45px;
    height: 45px;
 
+   padding: 0;
+
    border-radius: 50%;
    background-color: $orange;
    border: none;
@@ -24,6 +26,14 @@
 
    text-indent: -9999px;
  }
+
+  &--filter {
+    border: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 10px 0px;
+    font-size: 14px;
+  }
 
   &:hover {
     background-color: #fbd179;

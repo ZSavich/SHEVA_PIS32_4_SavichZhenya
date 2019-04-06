@@ -1,0 +1,89 @@
+.filter {
+
+  flex-basis: 24%;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  &__point {
+    margin-top: 15px;
+    border: none;
+  }
+
+  &__title {
+    font-size: 14px;
+    color: #aaadba;
+    text-transform: uppercase;
+  }
+
+  &__number {
+    display: inline-block;
+    width: 46%;
+    font-size: 14px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 14px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+
+    &:hover {
+      cursor: pointer;
+      color: orange;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 5px;
+      margin-bottom: -1px;
+      box-shadow: 0px 0px 0px 1px #0f364f;
+      box-sizing: border-box;
+    }
+
+    &:hover::before {
+      box-shadow: 0px 0px 0px 1px orange;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked + label::before {
+      border: 2px solid white;
+      box-shadow: 0px 0px 0px 1px orange;
+      background-color: $orange;
+    }
+  }
+}
+
+@media (max-width: $desktop) {
+  .filter {
+
+    &__form {
+      max-width: 50%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      width: 96%;
+    }
+  }
+}

@@ -10,6 +10,11 @@ body {
   color: $gray;
 }
 
+main {
+  background-image: url("../img/bg.png");
+  background-repeat: repeat;
+}
+
 a {
   text-decoration: none;
 }

@@ -1,0 +1,32 @@
+.breadcrumbs {
+  max-width: $desktop;
+  margin: 0 auto;
+  padding: 20px 15px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:last-child a {
+      color: $orange;
+    }
+
+    &:not(:last-child) a::after {
+      content: " \\ ";
+    }
+
+    &:not(:last-child) a:hover::after {
+      color: $blue;
+    }
+  }
+
+  &__link {
+    color: $blue;
+    padding-right: 5px;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}

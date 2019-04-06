@@ -1,0 +1,36 @@
+.pagination {
+
+  max-width: $desktop;
+  margin: 0 auto;
+
+  text-align: center;
+
+  padding-bottom: 50px;
+
+  &__item {
+    font-size: 14px;
+    color: $blue;
+    margin: 0 2px;
+
+    &[href]:hover {
+      color: $orange;
+    }
+
+    &--prev {
+      margin-right: 5px;
+    }
+
+    &--next {
+      margin-left: 5px;
+    }
+
+    &--active {
+      padding: 2px 5px;
+      color: white;
+      background-color: $orange;
+      border-radius: 6px;
+    }
+  }
+
+
+}

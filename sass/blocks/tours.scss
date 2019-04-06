@@ -1,0 +1,194 @@
+.tours {
+
+  flex-basis: 74%;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: $desktop;
+    margin: 0 auto;
+    padding: 20px 15px;
+  }
+
+  &__main-title {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    max-height: 400px;
+    background-color: white;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-bottom: 30px;
+  }
+
+  &__photo {
+    flex-basis: 50%;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 15px;
+  }
+
+  &__img {
+    position: absolute;
+    height: 100%;
+    max-width: none;
+  }
+
+  &__info {
+    flex-basis: 50%;
+    padding: 15px 20px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #606060;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__stars {
+    margin-bottom: 15px;
+  }
+
+  &__star {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+
+    background-image: url("../img/icons/star.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    background-image: url("../img/icons/date.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+  }
+
+  &__departure {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    background-image: url("../img/icons/plane.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+  }
+
+  &__breakfast {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    background-image: url("../img/icons/eat.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+  }
+
+  &__desc {
+    display: block;
+    margin-top: 20px;
+  }
+
+  &__status {
+    padding: 5px 15px;
+    background-color: #e25b26;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-weight: 500;
+
+    position: absolute;
+    left: 10px;
+    top: -15px;
+  }
+
+  &__country {
+    position: absolute;
+    padding: 5px 15px;
+    background-color: $orange;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px;
+
+    right: 10px;
+    top: -15px;
+  }
+
+  &__price {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #3499d9;
+    box-shadow: 0 5px 7px rgba(59,177,251,.4);
+    border-radius: 15px;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    transition-duration: .3s;
+    b {
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: #3cb3ff;
+    }
+  }
+}
+
+@media (max-width: $desktop) {
+  .tours {
+    min-width: $table;
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+  }
+}
+
+@media (max-width: $table) {
+  .tours {
+    min-width: $mobile;
+
+    &__item {
+      max-height: none;
+      flex-direction: column;
+    }
+
+    &__photo {
+      height: 200px;
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+
+    &__price {
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+  }
+}
