@@ -1,0 +1,11 @@
+.copyright {
+  flex-basis: 33%;
+  padding-left: 80px;
+  box-sizing: border-box;
+}
+
+@media (max-width: $table) {
+  .copyright {
+    padding: 0;
+  }
+}

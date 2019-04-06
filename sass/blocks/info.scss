@@ -1,0 +1,11 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: $table) {
+  .info {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

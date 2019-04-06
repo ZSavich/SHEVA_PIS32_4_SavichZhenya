@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Наши туры</title>
+</head>
+<body>
+    <header class="main-header">
+        <a class="main-header__logo logo">Savix Tour</a>
+        <nav class="main-header__navigation navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Главная</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">О нас</a>
+                </li>
+                <li class="navigation__item navigation__item--sub">
+                    <a href="#" class="navigation__link">Туры</a>
+                    <ul class="navigation__submenu">
+                        <li class="navigation__sumbenu-item">
+                            <a href="#">Горящие туры</a>
+                        </li>
+                        <li class="navigation__sumbenu-item">
+                            <a href="#">Подобрать тур</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main-header__phones">
+            <a href="tel:380977777777" class="main-header__phone">+38 (097) 777-77-77</a>
+            <a href="tel:380666666666" class="main-header__phone">+38 (066) 666-66-66</a>
+        </div>
+        <div class="main-header__user">
+            <a href="#" class="main-header__search main-header__search--usual">Search</a>
+            <a href="#" class="main-header__user-link">
+                Мой кабинет
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Наши туры</a></li>
+            </ul>
+        </section>
+        <div class="tours__wrapper">
+            <section class="tours">
+                <header class="title">
+                    <h1 class="title__main">Наши туры</h1>
+                    <p class="title__sub">Только лучшие предложения для любимых клиентов</p>
+                </header>
+                <article class="search search--usual">
+                    <form class="search__form">
+                        <fieldset class="search__point">
+                            <legend class="search__title">Куда</legend>
+                            <input type="text" name="country" placeholder="Страна" class="search__text  search__text--country" required>
+                        </fieldset>
+                        <fieldset class="search__point">
+                            <legend class="search__title">Дата</legend>
+                            <input type="date" name="dateIn" value="2019-01-01" class="search__date" required>
+                            <input type="date" name="dateOut" value="2019-01-01" class="search__date">
+                        </fieldset>
+                        <fieldset class="search__point">
+                            <legend class="search__title">Туристы</legend>
+                            <div class="search__adult"><input type="number" name="adult" value="1" class="search__number" required> Взрослых</div>
+                            <div class="search__children"><input type="number" name="children" value="0" class="search__number"> Детей</div>
+                        </fieldset>
+                        <input type="submit" class="btn btn--search" value="Найти">
+                    </form>
+                </article>
+                <ul class="tours__list">
+                    <li>
+                        <article class="tours__item">
+                            <div class="tours__photo">
+                                <img src="./img/photo/photo-1.jpg" alt="Trendy Lara 5* Лара" class="tours__img">
+                            </div>
+                            <h3 class="tours__title">
+                                Trendy Lara 5* Лара
+                            </h3>
+                            <div class="tours__stars">
+                                <i class="tours__star"></i>
+                                <i class="tours__star"></i>
+                                <i class="tours__star"></i>
+                                <i class="tours__star"></i>
+                                <i class="tours__star"></i>
+                            </div>
+                            <span class="tours__date">20/05/2019 - 27/05/2019</span>
+                            <span class="tours__departure">Вылет из Киева</span>
+                            <span class="tours__breakfast">Завтрак включен</span>
+                            <span class="tours__country">Турция</span>
+                            <span class="tours__status">ТОП</span>
+                            <span class="tours__desc">Отель Trendy Lara расположен на курорте Лара, в 3,6 км от торгового центра Antalium Premium Lara/Kundu. К услугам гостей открытый бассейн, частный пляж, сауна, ресторан, инфраструктура для занятий водными видами спорта и бесплатная частная парковка на территории.</span>
+                            <span class="tours__price">8 990 <b>грн. за 2х</b></span>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="tours__item">
+                            <div class="tours__photo">
+                                <img src="./img/photo/photo-1.jpg" alt="Trendy Lara 5* Лара" class="tours__img">
+                            </div>
+                            <h3 class="tours__title">
+                                Trendy Lara 5* Лара
+                            </h3>
+                            <div class="tours__stars">
+                                <i class="tours__star"></i>
+                                <i class="tours__star"></i>
+                                <i class="tours__star"></i>
+                                <i class="tours__star"></i>
+                                <i class="tours__star"></i>
+                            </div>
+                            <span class="tours__date">20/05/2019 - 27/05/2019</span>
+                            <span class="tours__departure">Вылет из Киева</span>
+                            <span class="tours__breakfast">Завтрак включен</span>
+                            <span class="tours__country">Турция</span>
+                            <span class="tours__status">ТОП</span>
+                            <span class="tours__desc">Отель Trendy Lara расположен на курорте Лара, в 3,6 км от торгового центра Antalium Premium Lara/Kundu. К услугам гостей открытый бассейн, частный пляж, сауна, ресторан, инфраструктура для занятий водными видами спорта и бесплатная частная парковка на территории.</span>
+                            <span class="tours__price">8 990 <b>грн. за 2х</b></span>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="tours__item">
+                            <div class="tours__photo">
+                                <img src="./img/photo/photo-1.jpg" alt="Trendy Lara 5* Лара" class="tours__img">
+                            </div>
+                            <h3 class="tours__title">
+                                Trendy Lara 5* Лара
+                            </h3>
+                            <div class="tours__stars">
+                                <i class="tours__star"></i>
+                                <i class="tours__star"></i>
+                                <i class="tours__star"></i>
+                                <i class="tours__star"></i>
+                                <i class="tours__star"></i>
+                            </div>
+                            <span class="tours__date">20/05/2019 - 27/05/2019</span>
+                            <span class="tours__departure">Вылет из Киева</span>
+                            <span class="tours__breakfast">Завтрак включен</span>
+                            <span class="tours__country">Турция</span>
+                            <span class="tours__status">ТОП</span>
+                            <span class="tours__desc">Отель Trendy Lara расположен на курорте Лара, в 3,6 км от торгового центра Antalium Premium Lara/Kundu. К услугам гостей открытый бассейн, частный пляж, сауна, ресторан, инфраструктура для занятий водными видами спорта и бесплатная частная парковка на территории.</span>
+                            <span class="tours__price">8 990 <b>грн. за 2х</b></span>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+            <section class="filter">
+                <form class="filter__form">
+                    <input type="submit" class="btn btn--filter" value="Применить">
+                    <fieldset class="filter__point">
+                        <legend class="filter__title">Стоимость</legend>
+                        <input type="number" name="costIn" value="0" class="filter__number">
+                        <span>—</span>
+                        <input type="number" name="costOut" value="10000" class="filter__number">
+                    </fieldset>
+                    <fieldset class="filter__name">
+                        <legend class="filter__title">
+                            Поиск по названию отеля
+                        </legend>
+                        <input type="text" name="name" placeholder="Введите название отеля" class="filter__text">
+                    </fieldset>
+                    <fieldset class="filter__hotel">
+                        <legend class="filter__title">Отель</legend>
+                        <label class="filter__label"><input type="checkbox" class="filter__checkbox"> Топ продаж</label>
+                        <label class="filter__label"><input type="checkbox" class="filter__checkbox"> Бесплатный Wi-Fi</label>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+        <section class="pagination">
+            <a href="#" class="pagination__item pagination__item--prev">Пред.</a>
+            <a href="#" class="pagination__item pagination__item--active">1</a>
+            <a href="#" class="pagination__item">2</a>
+            <a href="#" class="pagination__item">2</a>
+            <a href="#" class="pagination__item pagination__item--next">След.</a>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <span class="main-footer__bg-text">
+            Savix Tour
+        </span>
+        <div class="logo">
+            <img src="./img/logo.png" alt="Savix">
+        </div>
+        <div class="main-footer__navigation navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Главная</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">О нас</a>
+                </li>
+                <li class="navigation__item navigation__item--sub">
+                    <a href="#" class="navigation__link">Туры</a>
+                    <ul class="navigation__submenu">
+                        <li class="navigation__sumbenu-item">
+                            <a href="#">Горящие туры</a>
+                        </li>
+                        <li class="navigation__sumbenu-item">
+                            <a href="#">Подобрать тур</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Контакты</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="main-footer__line">
+        <div class="main-footer__info info">
+            <article class="contacts">
+                <h4 class="contacts__title">Наши контакты</h4>
+                <ul class="contacts__list">
+                    <li class="contacts__item  contacts__item--phone"><a href="tel:+380666666666">+38 (066) 666-66-66</a></li>
+                    <li class="contacts__item  contacts__item--phone"><a href="tel:+380964425566">+38 (096) 442-55-66</a></li>
+                    <li class="contacts__item  contacts__item--email"><a href="mailto:info@sazixtour.ua">info@sazixtour.ua</a></li>
+                    <li class="contacts__item  contacts__item--point">ул. Ванды Василевского, 44</li>
+                </ul>
+            </article>
+            <article class="socials">
+                <h4 class="socials__title">Мы в соц. сетях</h4>
+                <ul class="socials__list">
+                    <li class="socials__item socials__item--fb"><a href="#" class="socials__link">Facebook</a></li>
+                    <li class="socials__item socials__item--inst"><a href="#" class="socials__link">Instagram</a></li>
+                    <li class="socials__item socials__item--yt"><a href="#" class="socials__link">YouTube</a></li>
+                    <li class="socials__item socials__item--tw"><a href="#" class="socials__link">Twitter</a></li>
+                </ul>
+            </article>
+            <article class="copyright">
+                <p class="copyright__text">Copyright © 2019 Savix Tour Company S.L.
+                    All rights reserved.</p>
+            </article>
+        </div>
+    </footer>
+</body>
+</html>

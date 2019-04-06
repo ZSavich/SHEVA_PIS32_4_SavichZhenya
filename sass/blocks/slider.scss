@@ -1,0 +1,136 @@
+.slider {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to top, #0f364f, rgba(15,54,79,.03) 84%);
+  }
+
+  &__item {
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &--first {
+      background-image: url("../../img/slider/slide-1@x1.jpg");
+    }
+
+    &--second {
+      background-image: url("../../img/slider/slide-2@x1.jpg");
+    }
+
+    &--third {
+      background-image: url("../../img/slider/slide-3@x1.jpg");
+    }
+  }
+
+  &__desc {
+
+    display: block;
+    color: white;
+    max-width: 900px;
+  }
+
+  &__wrapper {
+    height: 100vh;
+    max-width: $desktop;
+    margin: 0 auto;
+    padding: 100px 0;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    position: relative;
+    z-index: 1;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20%;
+    bottom: 10%;
+    z-index: 2;
+  }
+
+  &__prev {
+    width: 40px;
+    height: 40px;
+    border: 3px solid white;
+    border-right: none;
+    border-top: none;
+    transform: rotate(40deg);
+    background-color: transparent;
+    text-indent: -9999px;
+    outline: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__next {
+    width: 40px;
+    height: 40px;
+    border: 3px solid white;
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(40deg);
+    background-color: transparent;
+    text-indent: -9999px;
+    outline: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__status {
+    font-size: 48px;
+    font-weight: 500;
+    color: white;
+
+    b {
+      font-size: 18px;
+      opacity: 0.5;
+      font-weight: 400;
+    }
+  }
+}
+
+@media (max-width: $desktop) {
+  .slider {
+
+    &__wrapper {
+      min-width: $table;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+  }
+}
+
+@media (max-width: $table) {
+  .slider {
+
+    &__wrapper {
+      min-width: $mobile;
+    }
+
+    &__control {
+      bottom: 15px;
+      left: 0;
+      right: 0;
+      justify-content: center
+    }
+  }
+}

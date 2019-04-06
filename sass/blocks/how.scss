@@ -1,0 +1,99 @@
+.how {
+
+  background-image: url("../img/points-map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: white;
+
+  &__wrapper {
+    max-width: $desktop;
+    margin: 0 auto;
+    padding: 80px 15px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 35px 15px;
+    max-width: 270px;
+    box-sizing: border-box;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    color: $blue;
+    background-color: transparent;
+    transition-duration: .2s;
+
+    &:hover {
+      background-color: $orange;
+      color: white;
+
+      .how__num {
+        background-color: white;
+        color: $orange;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__num {
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: $blue;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    box-shadow: 0 10px 7px rgba(49,62,100,.19);
+  }
+
+  &__title {
+    width: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: $desktop) {
+  .how {
+
+    &__wrapper {
+      min-width: $table;
+
+    }
+    &__list {
+    }
+  }
+}
+
+@media (max-width: $table) {
+  .how {
+
+    &__wrapper {
+      min-width: $mobile;
+    }
+
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

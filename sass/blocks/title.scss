@@ -1,0 +1,32 @@
+.title {
+  position: relative;
+  padding-left: 25px;
+
+  margin-bottom: 40px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 115%;
+    background-color: $blue;
+
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__main {
+    color: #ffc750;
+    font-size: 48px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &__sub {
+    font-size: 24px;
+    color: $blue;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+}

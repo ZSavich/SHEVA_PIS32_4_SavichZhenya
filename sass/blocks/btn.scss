@@ -1,0 +1,32 @@
+.btn {
+  background-color: $orange;
+  padding: 15px 60px;
+  border-radius: 5px;
+
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  transition-duration: .3s;
+
+ &--search {
+   width: 45px;
+   height: 45px;
+
+   border-radius: 50%;
+   background-color: $orange;
+   border: none;
+
+   background-image: url("../../img/icons/search.svg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 20px;
+
+   text-indent: -9999px;
+ }
+
+  &:hover {
+    background-color: #fbd179;
+    cursor: pointer;
+  }
+}

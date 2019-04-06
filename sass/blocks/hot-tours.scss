@@ -1,0 +1,147 @@
+.hot-tours {
+  background-image: url("../img/bg.png");
+  background-repeat: repeat;
+
+  &__wrapper {
+    max-width: $desktop;
+    margin: 0 auto;
+    padding: 80px 15px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  li:not(:nth-child(3n+3)) {
+    margin-right: 40px;
+  }
+
+  &__item {
+    max-width: 370px;
+    background-color: white;
+    position: relative;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  &__photo {
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  &__img {
+    height: 100%;
+    max-width: none;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    color: #606060;
+    margin: 0px;
+    margin-bottom: 10px;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__date {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    background-image: url("../img/icons/date.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+  }
+
+  &__departure {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    background-image: url("../img/icons/plane.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+  }
+
+  &__breakfast {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    background-image: url("../img/icons/eat.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+  }
+
+  &__country {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding: 5px 15px;
+    color: white;
+    font-weight: 500;
+    background-color: $orange;
+    border-radius: 15px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  &__price {
+    position: absolute;
+    top: 230px;
+    left: 0;
+    padding: 5px 15px;
+    color: $orange;
+    font-weight: 500;
+    background-color: white;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
+    b {
+      font-size: 14px;
+      color: #606060;
+      font-weight: 400;
+    }
+  }
+
+  &__item-wrapper {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: $desktop) {
+  .hot-tours {
+
+    &__wrapper {
+      min-width: $table;
+      box-sizing: border-box;
+    }
+
+    &__list {
+      justify-content: space-around;
+
+      li:not(:nth-child(3n+3)) {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: $table) {
+  .hot-tours {
+
+    &__wrapper {
+      min-width: $mobile;
+  }
+  }
+}

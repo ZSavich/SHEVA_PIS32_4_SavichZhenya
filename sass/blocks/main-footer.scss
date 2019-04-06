@@ -1,0 +1,50 @@
+.main-footer {
+  background-color: $blue;
+  background-image: url("../img/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+
+  &__wrapper {
+    max-width: $desktop;
+    margin: 0 auto;
+    padding: 40px 15px;
+    position: relative;
+  }
+
+  &__bg-text {
+    position: absolute;
+    font-size: 102px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: 0.3;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+  }
+
+  &__navigation {
+    justify-content: center;
+    margin: 0;
+  }
+
+  &__line {
+    border: 2px solid $orange;
+    margin: 20px 0px;
+  }
+}
+
+@media (max-width: $table) {
+  .main-footer {
+    background-image: none;
+  }
+}

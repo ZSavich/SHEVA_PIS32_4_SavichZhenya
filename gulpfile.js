@@ -15,15 +15,15 @@ const jsmin = require("gulp-jsmin");
 sass.compiler = require('node-sass');
 
 gulp.task("style", ()=>{
-    return gulp.src("sass/style.scss")
-        .pipe(plumber())
+    return gulp.src("sass/style.scss")/*
+        .pipe(plumber())*/
         .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer())
+        /*.pipe(autoprefixer())*/
         .pipe(gulp.dest("./style/"))
-        .pipe(gulp.dest("./build/style/"))
-        .pipe(csso())
-        .pipe(rename("style.min.css"))
-        .pipe(gulp.dest("./build/style"))
+        //.pipe(gulp.dest("./build/style/"))
+        /*.pipe(csso())
+        .pipe(rename("style.min.css"))*/
+        //.pipe(gulp.dest("./build/style"))
         .on('end', server.reload)
 });
 
