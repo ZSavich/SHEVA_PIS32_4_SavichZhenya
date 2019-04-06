@@ -9,6 +9,11 @@
 
   transition-duration: .3s;
 
+  &:hover {
+    background-color: #fbd179;
+    cursor: pointer;
+  }
+
  &--search {
    width: 45px;
    height: 45px;
@@ -35,8 +40,27 @@
     font-size: 14px;
   }
 
-  &:hover {
-    background-color: #fbd179;
-    cursor: pointer;
+  &--order {
+    width: 100%;
+    font-size: 18px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 5px 7px rgba(251,207,58,.4);
+    margin-bottom: 20px;
   }
+
+  &--call {
+    width: 100%;
+    background-color: #3499d9;
+    font-size: 18px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 5px 7px rgba(59,177,251,.4);
+
+    &:hover {
+      background-color: #3cb3ff;
+    }
+  }
+
+
 }

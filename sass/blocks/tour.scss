@@ -1,0 +1,160 @@
+.tour {
+  max-width: $desktop;
+  padding: 15px;
+  margin: 0 auto;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-size: 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__status {
+    padding: 5px 15px;
+    background-color: #e25b26;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-weight: 500;
+    margin-left: 30px;
+  }
+
+  &__country {
+    padding: 5px 15px;
+    background-color: $orange;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px;
+    margin-left: auto;
+  }
+
+  &__stars {
+    flex-basis: 100%;
+    margin-top: 10px;
+  }
+
+  &__details {
+    display: flex;
+  }
+
+  &__photos {
+    overflow: hidden;
+    flex-basis: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    transition-duration: .2s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
+    &--main {
+      width: auto;
+      max-width: none;
+      height: 400px;
+      margin-bottom: 15px;
+
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__desc {
+    flex-basis: 60%;
+    padding-left: 30px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+
+  &__btns {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &__price {
+    font-size: 24px;
+    font-weight: 500;
+    color: #143853;
+    margin: 0;
+    margin-bottom: 20px;
+
+    span {
+      font-size: 18px;
+      font-weight: 400;
+      display: block;
+    }
+  }
+
+  &__desc-title {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__desc-text {
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: $desktop) {
+
+  .tour {
+    min-width: $table;
+
+    &__details {
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    &__photos {
+      margin-bottom: 30px;
+    }
+
+    &__photo--main {
+      flex-basis: 100%;
+    }
+  }
+}
+
+@media (max-width: $table) {
+
+  .tour {
+    min-width: $mobile;
+
+    &__photos {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    &__info {
+      flex-direction: column;
+    }
+  }
+}

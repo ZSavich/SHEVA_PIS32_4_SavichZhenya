@@ -1,0 +1,69 @@
+.services {
+
+  &__title {
+    color: $orange;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 0px;
+  }
+
+  &__value {
+    color: #606060;
+    margin-top: 0px;
+    margin-bottom: 15px;
+
+    b {
+      color: #123751;
+    }
+  }
+
+  &__item {
+    padding-left: 30px;
+    position: relative;
+  }
+
+  &__item--date i {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    background-image: url("../img/icons/date-hover.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+  }
+
+  &__item--route i {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    background-image: url("../img/icons/plane-hover.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+  }
+
+  &__item--breakfast i {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    background-image: url("../img/icons/eat-hover.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+  }
+}
