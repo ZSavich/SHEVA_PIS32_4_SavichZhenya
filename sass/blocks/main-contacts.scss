@@ -1,0 +1,81 @@
+.main-contacts {
+  max-width: $desktop;
+  margin: 0 auto;
+  padding: 30px 15px;
+
+
+  &__title {
+    font-size: 24px;
+    color: $blue;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+
+    &--phone {
+      background-image: url("../../img/icons/phone-blue.svg");
+    }
+
+    &--street {
+      background-image: url("../../img/icons/point-blue.svg");
+    }
+
+    &--email {
+      background-image: url("../../img/icons/email-blue.svg");
+    }
+
+    &--socials {
+      display: inline-block;
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: $desktop) {
+  .main-contacts {
+    min-width: $table;
+
+    &__info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+
+      margin-bottom: 40px;
+
+      article {
+        flex-basis: 35%;
+      }
+    }
+  }
+}
+
+@media (max-width: $table) {
+  .main-contacts {
+    min-width: $mobile;
+
+
+    &__info {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+  }
+}

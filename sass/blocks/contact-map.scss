@@ -1,0 +1,54 @@
+.contact-map {
+
+  position: relative;
+
+  &__info {
+    position: absolute;
+    max-width: $desktop;
+    margin: 0 auto;
+
+    top: 20%;
+    left: 30%;
+    transform: translateX(-50%);
+
+    background-color: $orange;
+    padding: 25px 25px;
+    padding-left: 50px;
+
+    border-radius: 15px;
+
+    background-image: url("../img/icons/point.svg");
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position: 10px center;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+@media (max-width: $desktop) {
+  .contact-map {
+
+    height: 300px;
+
+    &__info {
+      top: 10%;
+      left: 40%;
+      padding: 15px;
+      padding-left: 50px;
+    }
+  }
+}

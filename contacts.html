@@ -6,43 +6,67 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Контакты</title>
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
     <header class="main-header">
-        <a class="main-header__logo logo">Savix Tour</a>
-        <nav class="main-header__navigation navigation">
-            <ul class="navigation__list">
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link">Главная</a>
-                </li>
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link">О нас</a>
-                </li>
-                <li class="navigation__item navigation__item--sub">
-                    <a href="#" class="navigation__link">Туры</a>
-                    <ul class="navigation__submenu">
-                        <li class="navigation__sumbenu-item">
-                            <a href="#">Горящие туры</a>
-                        </li>
-                        <li class="navigation__sumbenu-item">
-                            <a href="#">Подобрать тур</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link">Контакты</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="main-header__phones">
-            <a href="tel:380977777777" class="main-header__phone">+38 (097) 777-77-77</a>
-            <a href="tel:380666666666" class="main-header__phone">+38 (066) 666-66-66</a>
-        </div>
-        <div class="main-header__user">
-            <a href="#" class="main-header__search main-header__search--usual">Search</a>
-            <a href="#" class="main-header__user-link">
-                Мой кабинет
-            </a>
+        <div class="main-header__wrapper">
+            <a href="index.html" class="main-header__logo logo">Savix Tour</a>
+            <nav class="main-header__navigation navigation navigation--close">
+                <button class="navigation__toggle navigation__toggle--active" type="button">Открыть меню</button>
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="index.html" class="navigation__link">Главная</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">О нас</a>
+                    </li>
+                    <li class="navigation__item navigation__item--sub">
+                        <a href="#" class="navigation__link">Туры</a>
+                        <ul class="navigation__submenu">
+                            <li class="navigation__submenu-item">
+                                <a href="#">Горящие туры</a>
+                            </li>
+                            <li class="navigation__submenu-item">
+                                <a href="tours.html">Подобрать тур</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="contacts.html" class="navigation__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" class="main-header__search main-header__search--main">Найти тур</a>
+            <div class="main-header__phones">
+                <a href="tel:380977777777" class="main-header__phone">+38 (097) 777-77-77</a>
+                <a href="tel:380666666666" class="main-header__phone">+38 (066) 666-66-66</a>
+            </div>
+            <div class="main-header__user">
+                <a href="#" class="main-header__user-link">
+                    Мой кабинет
+                </a>
+            </div>
+            <article class="search hidden">
+                <form class="search__form">
+                    <fieldset class="search__point">
+                        <legend class="search__title">Куда</legend>
+                        <input type="text" name="country" placeholder="Страна" class="search__text  search__text--country" required>
+                    </fieldset>
+                    <fieldset class="search__point">
+                        <legend class="search__title">Дата</legend>
+                        <input type="date" name="dateIn" value="2019-01-01" class="search__date" required> —
+                        <input type="date" name="dateOut" value="2019-01-01" class="search__date">
+                    </fieldset>
+                    <fieldset class="search__point">
+                        <legend class="search__title">Туристы</legend>
+                        <div class="search__adult"><input type="number" name="adult" value="1" class="search__number" required> Взрослых</div>
+                        <div class="search__children"><input type="number" name="children" value="0" class="search__number"> Детей</div>
+                    </fieldset>
+                    <input type="submit" class="btn btn--search" value="Найти">
+                </form>
+            </article>
         </div>
     </header>
     <main>
@@ -61,16 +85,16 @@
                 <div class="main-contacts__info">
                     <article class="main-contacts__phones">
                         <b class="main-contacts__title main-contacts__title--phone">Телефоны:</b>
-                        <p class="main-contacts__phone">+38 (066) 666-66-66</p>
-                        <p class="main-contacts__phone">+38 (097) 666-66-66</p>
+                        <p class="main-contacts__text main-contacts__phone">+38 (066) 666-66-66</p>
+                        <p class="main-contacts__text main-contacts__phone">+38 (097) 666-66-66</p>
                     </article>
                     <article class="main-contacts__street">
                         <b class="main-contacts__title main-contacts__title--street">Адрес:</b>
-                        <p class="main-contacts__street">ул. Ванды Василевской, 44</p>
+                        <p class="main-contacts__text main-contacts__street">ул. Ванды Василевской, 44</p>
                     </article>
                     <article class="main-contacts__email">
                         <b class="main-contacts__title main-contacts__title--email">Почта:</b>
-                        <p class="main-contacts__email">info@savixtour.ua</p>
+                        <p class="main-contacts__text main-contacts__email">info@savixtour.ua</p>
                     </article>
                     <article class="main-contacts__socials">
                         <b class="main-contacts__title main-contacts__title--socials">Мы в соц. сетях:</b>
@@ -83,7 +107,7 @@
                     </article>
                 </div>
                 <div class="main-contacts__write-us write-us">
-                    <b class="write-us">Напишите нам</b>
+                    <b class="write-us__topic">Напишите нам</b>
                     <form class="write-us__form">
                         <fieldset class="write-us__point">
                             <legend class="write-us__title">Имя</legend>
@@ -95,77 +119,70 @@
                         </fieldset>
                         <fieldset class="write-us__point">
                             <legend class="write-us__title">Cообщение</legend>
-                            <textarea name="message" class="write-us__textarea">
-                                Введите сообщение
-                            </textarea>
+                            <textarea name="message" class="write-us__textarea" placeholder="Введите сообщение"></textarea>
                         </fieldset>
+                        <input type="submit" class="btn btn--write" value="Отправить">
                     </form>
                 </div>
             </div>
         </section>
-        <div class="map">
-            <img src="./img/contact-map.jpg" alt="Киев, ул. Ванды Василевской, 44" class="map__photo">
-            <div class="map__info">
-                <b class="map__title">Офис</b>
-                <p class="map__text">Адрес: Киев, ул. Ванды Василевской, 44</p>
+        <div class="contact-map">
+            <img src="./img/contact-map.jpg" alt="Киев, ул. Ванды Василевской, 44" class="contact-map__photo">
+            <div class="contact-map__info">
+                <b class="contact-map__title">Офис</b>
+                <p class="contact-map__text">Адрес: Киев, ул. Ванды Василевской, 44</p>
             </div>
         </div>
     </main>
     <footer class="main-footer">
-        <span class="main-footer__bg-text">
-            Savix Tour
-        </span>
-        <div class="logo">
-            <img src="./img/logo.png" alt="Savix">
-        </div>
-        <div class="main-footer__navigation navigation">
-            <ul class="navigation__list">
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link">Главная</a>
-                </li>
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link">О нас</a>
-                </li>
-                <li class="navigation__item navigation__item--sub">
-                    <a href="#" class="navigation__link">Туры</a>
-                    <ul class="navigation__submenu">
-                        <li class="navigation__sumbenu-item">
-                            <a href="#">Горящие туры</a>
-                        </li>
-                        <li class="navigation__sumbenu-item">
-                            <a href="#">Подобрать тур</a>
-                        </li>
+        <div class="main-footer__wrapper">
+            <span class="main-footer__bg-text">
+                Savix Tour
+            </span>
+            <div class="main-footer__logo logo">
+                <img src="./img/logo.png" alt="Savix">
+            </div>
+            <div class="main-footer__navigation navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item navigation__item--footer">
+                        <a href="#" class="navigation__link">Главная</a>
+                    </li>
+                    <li class="navigation__item navigation__item--footer">
+                        <a href="#" class="navigation__link">О нас</a>
+                    </li>
+                    <li class="navigation__item navigation__item--footer">
+                        <a href="#" class="navigation__link">Туры</a>
+                    </li>
+                    <li class="navigation__item navigation__item--footer">
+                        <a href="#" class="navigation__link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="main-footer__line">
+            <div class="main-footer__info info">
+                <article class="contacts">
+                    <h4 class="contacts__title">Наши контакты</h4>
+                    <ul class="contacts__list">
+                        <li class="contacts__item  contacts__item--phone"><a href="tel:+380666666666">+38 (066) 666-66-66</a></li>
+                        <li class="contacts__item  contacts__item--phone"><a href="tel:+380964425566">+38 (096) 442-55-66</a></li>
+                        <li class="contacts__item  contacts__item--email"><a href="mailto:info@sazixtour.ua">info@sazixtour.ua</a></li>
+                        <li class="contacts__item  contacts__item--point">ул. Ванды Василевского, 44</li>
                     </ul>
-                </li>
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link">Контакты</a>
-                </li>
-            </ul>
-        </div>
-        <hr class="main-footer__line">
-        <div class="main-footer__info info">
-            <article class="contacts">
-                <h4 class="contacts__title">Наши контакты</h4>
-                <ul class="contacts__list">
-                    <li class="contacts__item  contacts__item--phone"><a href="tel:+380666666666">+38 (066) 666-66-66</a></li>
-                    <li class="contacts__item  contacts__item--phone"><a href="tel:+380964425566">+38 (096) 442-55-66</a></li>
-                    <li class="contacts__item  contacts__item--email"><a href="mailto:info@sazixtour.ua">info@sazixtour.ua</a></li>
-                    <li class="contacts__item  contacts__item--point">ул. Ванды Василевского, 44</li>
-                </ul>
-            </article>
-            <article class="socials">
-                <h4 class="socials__title">Мы в соц. сетях</h4>
-                <ul class="socials__list">
-                    <li class="socials__item socials__item--fb"><a href="#" class="socials__link">Facebook</a></li>
-                    <li class="socials__item socials__item--inst"><a href="#" class="socials__link">Instagram</a></li>
-                    <li class="socials__item socials__item--yt"><a href="#" class="socials__link">YouTube</a></li>
-                    <li class="socials__item socials__item--tw"><a href="#" class="socials__link">Twitter</a></li>
-                </ul>
-            </article>
-            <article class="copyright">
-                <p class="copyright__text">Copyright © 2019 Savix Tour Company S.L.
-                    All rights reserved.</p>
-            </article>
+                </article>
+                <article class="socials">
+                    <h4 class="socials__title">Мы в соц. сетях</h4>
+                    <ul class="socials__list">
+                        <li class="socials__item socials__item--fb"><a href="#" class="socials__link">Facebook</a></li>
+                        <li class="socials__item socials__item--inst"><a href="#" class="socials__link">Instagram</a></li>
+                        <li class="socials__item socials__item--yt"><a href="#" class="socials__link">YouTube</a></li>
+                        <li class="socials__item socials__item--tw"><a href="#" class="socials__link">Twitter</a></li>
+                    </ul>
+                </article>
+                <article class="copyright">
+                    <p class="copyright__text">Copyright © 2019 Savix Tour Company S.L.
+                        All rights reserved.</p>
+                </article>
+            </div>
         </div>
     </footer>
 </body>
