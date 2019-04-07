@@ -554,11 +554,11 @@ button {
     background-position: left center;
     background-size: contain; }
     .main-contacts__title--phone {
-      background-image: url("../../img/icons/phone-blue.svg"); }
+      background-image: url("../img/icons/phone-blue.svg"); }
     .main-contacts__title--street {
-      background-image: url("../../img/icons/point-blue.svg"); }
+      background-image: url("../img/icons/point-blue.svg"); }
     .main-contacts__title--email {
-      background-image: url("../../img/icons/email-blue.svg"); }
+      background-image: url("../img/icons/email-blue.svg"); }
     .main-contacts__title--socials {
       display: inline-block;
       padding-left: 0;
