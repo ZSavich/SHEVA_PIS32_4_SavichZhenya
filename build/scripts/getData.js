@@ -1,4 +1,4 @@
-let requestURL = 'http://localhost:3000/data.json';
+let requestURL = 'https://raw.githubusercontent.com/ZSavich/SHEVA_PIS32_4_SavichZhenya/master/data.json';
 let request = new XMLHttpRequest();
 const comSub = document.getElementById('comment-send');
 let comments = [];
