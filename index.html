@@ -2,8 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Savix Tour | Главная страница</title>
     <link rel="stylesheet" href="style/normalize.css">
@@ -51,18 +50,22 @@
             <article class="search hidden">
                 <form class="search__form">
                     <fieldset class="search__point">
-                        <legend class="search__title">Куда</legend>
-                        <input type="text" name="country" placeholder="Страна" class="search__text  search__text--country" required>
+                        <label>
+                            <legend class="search__title">Куда</legend>
+                            <input type="text" name="country" placeholder="Страна" class="search__text  search__text--country" required>
+                        </label>
                     </fieldset>
                     <fieldset class="search__point">
-                        <legend class="search__title">Дата</legend>
-                        <input type="date" name="dateIn" value="2019-01-01" class="search__date" required> —
-                        <input type="date" name="dateOut" value="2019-01-01" class="search__date">
+                        <label>
+                            <legend class="search__title">Дата</legend>
+                            <input type="date" name="dateIn" value="2019-01-01" class="search__date" required> —
+                            <input type="date" name="dateOut" value="2019-01-01" class="search__date">
+                        </label>
                     </fieldset>
                     <fieldset class="search__point">
                         <legend class="search__title">Туристы</legend>
-                        <div class="search__adult"><input type="number" name="adult" value="1" class="search__number" required> Взрослых</div>
-                        <div class="search__children"><input type="number" name="children" value="0" class="search__number"> Детей</div>
+                        <label class="search__adult"><input type="number" name="adult" value="1" class="search__number" required> Взрослых</label>
+                        <label class="search__children"><input type="number" name="children" value="0" class="search__number"> Детей</label>
                     </fieldset>
                     <input type="submit" class="btn btn--search" value="Найти">
                 </form>
