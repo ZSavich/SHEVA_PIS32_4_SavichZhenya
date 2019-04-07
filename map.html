@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 400px;  /* The height is 400 pixels */
+            width: 100%;  /* The width is the width of the web page */
+        }
+    </style>
+</head>
+<body>
+<h3>My Google Maps Demo</h3>
+
+<script>
+    function initMap() {
+        var coordinates = {lat: 50.455420, lng: 30.472517},
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            disableDefaultUI: true,
+            scrollwheel: false,
+            center: coordinates
+        });
+
+        var image = new google.maps.MarkerImage (
+            'img/icons/pointMap.svg',
+            null, /* size is determined at runtime */
+            null, /* origin is 0,0 */
+            null, /* anchor is bottom center of the scaled image */
+            new google.maps.Size(72,70)
+         )
+        // var image = './img/icons/pointMap.svg';
+        console.log(image);
+        marker = new google.maps.Marker({
+            position: coordinates,
+            map: map,
+            icon: image,
+            title: 'Hello World!',
+            animation: google.maps.Animation.DROP
+        });
+
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrx5_FWtFL87bqu0vVCCFWEtS4iaEdC9g&callback=initMap"></script>
+</body>
+</html>

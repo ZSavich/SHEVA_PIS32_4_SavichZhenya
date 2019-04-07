@@ -17,6 +17,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 1;
+    transition: opacity .2s;
 
     &--first {
       background-image: url("../../img/slider/slide-1@x1.jpg");
@@ -28,6 +30,10 @@
 
     &--third {
       background-image: url("../../img/slider/slide-3@x1.jpg");
+    }
+
+    &.hidden {
+      opacity: .2;
     }
   }
 
@@ -122,8 +128,14 @@
 @media (max-width: $table) {
   .slider {
 
+    &::after {
+      background-image: linear-gradient(to top, #0f364f 70%, rgba(15, 54, 79, 0.03) 100%)
+    }
+
     &__wrapper {
       min-width: $mobile;
+      height: auto;
+      padding-top: 250px;
     }
 
     &__control {

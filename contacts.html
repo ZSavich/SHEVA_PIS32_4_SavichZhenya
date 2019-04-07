@@ -38,7 +38,7 @@
                     </li>
                 </ul>
             </nav>
-            <a href="#" class="main-header__search main-header__search--main">Найти тур</a>
+            <a href="#" class="main-header__search">Найти тур</a>
             <div class="main-header__phones">
                 <a href="tel:380977777777" class="main-header__phone">+38 (097) 777-77-77</a>
                 <a href="tel:380666666666" class="main-header__phone">+38 (066) 666-66-66</a>
@@ -127,7 +127,7 @@
             </div>
         </section>
         <div class="contact-map">
-            <img src="./img/contact-map.jpg" alt="Киев, ул. Ванды Василевской, 44" class="contact-map__photo">
+            <div id="map"></div>
             <div class="contact-map__info">
                 <b class="contact-map__title">Офис</b>
                 <p class="contact-map__text">Адрес: Киев, ул. Ванды Василевской, 44</p>
@@ -185,5 +185,35 @@
             </div>
         </div>
     </footer>
+    <script src="./scripts/main.js"></script>
+    <script>
+        function initMap() {
+            var coordinates = {lat: 50.455420, lng: 30.472517},
+
+                map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 15,
+                    disableDefaultUI: true,
+                    scrollwheel: false,
+                    center: coordinates
+                });
+
+            var image = new google.maps.MarkerImage (
+                'img/icons/pointMap.svg',
+                null, /* size is determined at runtime */
+                null, /* origin is 0,0 */
+                null, /* anchor is bottom center of the scaled image */
+                new google.maps.Size(72,70)
+            )
+            marker = new google.maps.Marker({
+                position: coordinates,
+                map: map,
+                icon: image,
+                title: 'Hello World!',
+                animation: google.maps.Animation.DROP
+            });
+
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrx5_FWtFL87bqu0vVCCFWEtS4iaEdC9g&callback=initMap"></script>
 </body>
 </html>

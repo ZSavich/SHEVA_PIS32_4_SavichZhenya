@@ -6,8 +6,13 @@
   top: 200px;
   left: 50%;
   transform: translateX(-50%);
-
+  z-index: 2;
   background-color: white;
+
+  &:not(.hidden) {
+    animation: searchFormIn .7s ease-in-out;
+    animation-fill-mode: both;
+  }
 
   &__form {
     display: flex;
@@ -56,5 +61,28 @@
 
   &__children {
     display: inline-block;
+  }
+}
+
+@media (max-width: $desktop) {
+  .search {
+
+    min-width: $table;
+
+    &__form {
+      flex-direction: column;
+    }
+  }
+}
+@media (max-width: $table) {
+  .search {
+    min-width: $mobile;
+
+    &__point {
+      width: 100%;
+      text-align: center;
+      font-size: 0;
+      margin-bottom: 10px;
+    }
   }
 }

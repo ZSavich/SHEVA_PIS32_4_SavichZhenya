@@ -38,7 +38,7 @@
                 </li>
             </ul>
         </nav>
-        <a href="#" class="main-header__search main-header__search--main">Найти тур</a>
+        <a href="#" class="main-header__search">Найти тур</a>
         <div class="main-header__phones">
             <a href="tel:380977777777" class="main-header__phone">+38 (097) 777-77-77</a>
             <a href="tel:380666666666" class="main-header__phone">+38 (066) 666-66-66</a>
@@ -143,10 +143,50 @@
             </div>
         </div>
     </section>
+    <section class="comments">
+        <header class="comments__header">
+            <h3 class="comments__title">Комментарии</h3>
+        </header>
+        <ul class="comments__list">
+            <li class="comments__item">
+                <div class="comments__user">
+                    <img src="./img/feedback/1.jpg" alt="Игорь Волков" class="comments__img">
+                    <span class="comments__name">Елена Волкова</span>
+                </div>
+                <p class="comments__mess">Нет причины, которая может заставить меня еще раз остановиться в этой "Клеопатре"! Единственный плюс - расположение прекрасное, но рядом и так 1000 отелей. Выбирайте другой. Причины: на ресепшене никогда никого нет, оплачивать номер требуют прямо при входе, не давая даже отдышаться. Такое впечатление, что опасаются, что увидев номер, ты можешь убежать......А бежать есть от чего: отель старый, трещины на стенах, холод собачий, оплата сплит-системы производится отдельно, а греть номер бессмысленно, так как отовсюду дует!!!! Белье старое, везде пыль, слышимость 100%,уборка условная, пепельница стояла полная на балконе 5 дней.....Нам позвонили из турагентства по поводу отмены экскурсии - никто с ресепшена не передал!!!!И мы в 5 утра караулили холл, кстати о холле: в нем вы и будете завтракать!!!!И через вас будут ходить все пребывающие-убывающие, рабочие, которые все время что-то ремонтируют, персонал...И завтрак очень скудный, тут же кошки...Короче, ребята не надо туда ехать, пока, приятных путешествий</p>
+                <time class="comments__date" datetime="2019-04-17">17 Апреля 2019</time>
+            </li>
+            <li class="comments__item">
+                <div class="comments__user">
+                    <img src="./img/feedback/1.jpg" alt="Игорь Волков" class="comments__img">
+                    <span class="comments__name">Елена Волкова</span>
+                </div>
+                <p class="comments__mess">Нет причины, которая может заставить меня еще раз остановиться в этой "Клеопатре"! Единственный плюс - расположение прекрасное, но рядом и так 1000 отелей. Выбирайте другой. Причины: на ресепшене никогда никого нет, оплачивать номер требуют прямо при входе, не давая даже отдышаться. Такое впечатление, что опасаются, что увидев номер, ты можешь убежать......А бежать есть от чего: отель старый, трещины на стенах, холод собачий, оплата сплит-системы производится отдельно, а греть номер бессмысленно, так как отовсюду дует!!!! Белье старое, везде пыль, слышимость 100%,уборка условная, пепельница стояла полная на балконе 5 дней.....Нам позвонили из турагентства по поводу отмены экскурсии - никто с ресепшена не передал!!!!И мы в 5 утра караулили холл, кстати о холле: в нем вы и будете завтракать!!!!И через вас будут ходить все пребывающие-убывающие, рабочие, которые все время что-то ремонтируют, персонал...И завтрак очень скудный, тут же кошки...Короче, ребята не надо туда ехать, пока, приятных путешествий</p>
+                <time class="comments__date" datetime="2019-04-17">17 Апреля 2019</time>
+            </li>
+        </ul>
+
+        <div class="comments__add">
+            <span class="comments__add-title">
+                Добавить отзыв
+            </span>
+            <form action="#" class="comments__form">
+                <fieldset class="comments__point">
+                    <legend class="comments__point-title">Имя</legend>
+                    <input type="text" name="name" placeholder="Введите Ваше имя" class="comments__text">
+                </fieldset>
+                <fieldset class="comments__point">
+                    <legend class="comments__point-title">Отзыв</legend>
+                    <textarea name="message" class="comments__textarea" placeholder="Введите сообщение"></textarea>
+                </fieldset>
+                <input type="submit" class="btn btn--write" value="Отправить">
+            </form>
+        </div>
+    </section>
     <div class="hotel-map">
         <b>Отель на карте</b>
         <div class="hotel-map__content">
-            <img src="./img/map.jpg" alt="Карта">
+            <div id="map"></div>
         </div>
     </div>
 </main>
@@ -201,5 +241,34 @@
         </div>
     </div>
 </footer>
+<script src="./scripts/main.js"></script>
+<script>
+    function initMap() {
+        var coordinates = {lat: 36.861471, lng: 30.922676},
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                disableDefaultUI: true,
+                scrollwheel: false,
+                center: coordinates
+            });
+
+        var image = new google.maps.MarkerImage (
+            'img/icons/pointMap.svg',
+            null, /* size is determined at runtime */
+            null, /* origin is 0,0 */
+            null, /* anchor is bottom center of the scaled image */
+            new google.maps.Size(72,70)
+        )
+        marker = new google.maps.Marker({
+            position: coordinates,
+            map: map,
+            icon: image,
+            animation: google.maps.Animation.DROP
+        });
+
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrx5_FWtFL87bqu0vVCCFWEtS4iaEdC9g&callback=initMap"></script>
 </body>
 </html>

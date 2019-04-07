@@ -2,6 +2,7 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "scaffolding.scss";
+@import "animations";
 
 @import "./blocks/hidden";
 @import "./blocks/title";
@@ -31,3 +32,4 @@
 @import "./blocks/socials";
 @import "./blocks/hotel-map";
 @import "./blocks/contact-map";
+@import "./blocks/comments";

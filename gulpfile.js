@@ -54,11 +54,11 @@ gulp.task("svgmin", ()=>{
 });
 
 gulp.task("jsmin", function(){
-    return gulp.src("./js/*.js")
-        .pipe(gulp.dest('./build/js'))
-        .pipe(jsmin())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest("./build/js"))
+    return gulp.src("./scripts/*.js")
+        /*.pipe(gulp.dest('./build/js'))*/
+        /*.pipe(jsmin())*/
+        /*.pipe(rename({suffix: '.min'}))*/
+        /*.pipe(gulp.dest("./build/js"))*/
 });
 
 gulp.task("serve", gulp.series(gulp.parallel("style"), ()=>{
@@ -70,8 +70,9 @@ gulp.task("serve", gulp.series(gulp.parallel("style"), ()=>{
     });
 
     gulp.watch("sass/**/*.scss", gulp.series("style"));
-    gulp.watch("js/*.js"), gulp.series("jsmin");
+    gulp.watch("scripts/*.js"), gulp.series("jsmin");
     gulp.watch("*.html", gulp.series("copyhtml"));
+    gulp.watch("scripts/*.js").on("change", server.reload);
     gulp.watch("*.html").on("change", server.reload);
 }));
 
