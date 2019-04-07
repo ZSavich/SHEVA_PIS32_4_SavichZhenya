@@ -2,19 +2,19 @@
   font-family: "Neo Sans Pro";
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/NeoSansPro-Regular.woff") format("woff"), url("../fonts/NeoSansPro-Regular.woff2") format("woff2"); }
+  src: url("../fonts/NeoSansPro-Regular.woff2") format("woff2"), url("../fonts/NeoSansPro-Regular.woff") format("woff"); }
 
 @font-face {
   font-family: "Neo Sans Pro";
   font-weight: 500;
   font-display: swap;
-  src: url("../fonts/NeoSansPro-Medium.woff") format("woff"), url("../fonts/NeoSansPro-Medium.woff2") format("woff2"); }
+  src: url("../fonts/NeoSansPro-Medium.woff2") format("woff2"), url("../fonts/NeoSansPro-Medium.woff") format("woff"); }
 
 @font-face {
   font-family: "Neo Sans Pro";
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/NeoSansPro-Bold.woff") format("woff"), url("../fonts/NeoSansPro-Bold.woff2") format("woff2"); }
+  src: url("../fonts/NeoSansPro-Bold.woff2") format("woff2"), url("../fonts/NeoSansPro-Bold.woff") format("woff"); }
 
 body {
   min-width: 320px;
