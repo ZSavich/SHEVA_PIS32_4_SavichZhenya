@@ -28,14 +28,14 @@
     }
 
     &--second {
-      background-image: url("../img/slider/webp/slide-2@x1.webp");
+      background-image: url("../img/slider/slide-2@x1.webp");
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/slider/slide-2@x2.webp");
       }
     }
 
     &--third {
-      background-image: url("../img/slider/webp/slide-3@x1.webp");
+      background-image: url("../img/slider/slide-3@x1.webp");
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/slider/slide-3@x2.webp");
       }
@@ -132,15 +132,15 @@
 
     &__item {
       &--first {
-        background-image: url("../../img/slider/slide-1-table@x1.webp");
+        background-image: url("../img/slider/slide-1-table@x1.webp");
       }
 
       &--second {
-        background-image: url("../../img/slider/slide-2-table@x1.webp");
+        background-image: url("../img/slider/slide-2-table@x1.webp");
       }
 
       &--third {
-        background-image: url("../../img/slider/slide-3-table@x1.webp");
+        background-image: url("../img/slider/slide-3-table@x1.webp");
       }
     }
 
@@ -161,15 +161,15 @@
 
     &__item {
       &--first {
-        background-image: url("../../img/slider/slide-1-mobile@x1.webp");
+        background-image: url("../img/slider/slide-1-mobile@x1.webp");
       }
 
       &--second {
-        background-image: url("../../img/slider/slide-2-mobile@x1.webp");
+        background-image: url("../img/slider/slide-2-mobile@x1.webp");
       }
 
       &--third {
-        background-image: url("../../img/slider/slide-3-mobile@x1.webp");
+        background-image: url("../img/slider/slide-3-mobile@x1.webp");
       }
     }
 

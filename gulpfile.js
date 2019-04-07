@@ -58,10 +58,10 @@ gulp.task("svgmin", ()=>{
 
 gulp.task("jsmin", function(){
     return gulp.src("./scripts/*.js")
-        .pipe(gulp.dest('./build/js'))
+        .pipe(gulp.dest('./build/scripts'))
         .pipe(jsmin())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest("./build/js"))
+        .pipe(gulp.dest("./build/scripts"))
 });
 
 gulp.task("serve", gulp.series(gulp.parallel("style"), ()=>{
