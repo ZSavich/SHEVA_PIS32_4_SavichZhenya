@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trendy Lara 5* Лара</title>
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+<header class="main-header">
+    <div class="main-header__wrapper">
+        <a href="index.html" class="main-header__logo logo">Savix Tour</a>
+        <nav class="main-header__navigation navigation navigation--close">
+            <button class="navigation__toggle navigation__toggle--active" type="button">Открыть меню</button>
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="index.html" class="navigation__link">Главная</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">О нас</a>
+                </li>
+                <li class="navigation__item navigation__item--sub">
+                    <a href="#" class="navigation__link">Туры</a>
+                    <ul class="navigation__submenu">
+                        <li class="navigation__submenu-item">
+                            <a href="#">Горящие туры</a>
+                        </li>
+                        <li class="navigation__submenu-item">
+                            <a href="tours.html">Подобрать тур</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navigation__item">
+                    <a href="contacts.html" class="navigation__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" class="main-header__search">Найти тур</a>
+        <div class="main-header__phones">
+            <a href="tel:380977777777" class="main-header__phone">+38 (097) 777-77-77</a>
+            <a href="tel:380666666666" class="main-header__phone">+38 (066) 666-66-66</a>
+        </div>
+        <div class="main-header__user">
+            <a href="#" class="main-header__user-link">
+                Мой кабинет
+            </a>
+        </div>
+        <article class="search hidden">
+            <form class="search__form">
+                <fieldset class="search__point">
+                    <legend class="search__title">Куда</legend>
+                    <input type="text" name="country" placeholder="Страна" class="search__text  search__text--country" required>
+                </fieldset>
+                <fieldset class="search__point">
+                    <legend class="search__title">Дата</legend>
+                    <input type="date" name="dateIn" value="2019-01-01" class="search__date" required> —
+                    <input type="date" name="dateOut" value="2019-01-01" class="search__date">
+                </fieldset>
+                <fieldset class="search__point">
+                    <legend class="search__title">Туристы</legend>
+                    <div class="search__adult"><input type="number" name="adult" value="1" class="search__number" required> Взрослых</div>
+                    <div class="search__children"><input type="number" name="children" value="0" class="search__number"> Детей</div>
+                </fieldset>
+                <input type="submit" class="btn btn--search" value="Найти">
+            </form>
+        </article>
+    </div>
+</header>
+<main>
+    <section class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Наши туры</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Trendy Lara 5* Лара</a></li>
+        </ul>
+    </section>
+    <section class="tour">
+        <header class="tour__header">
+            <h1 class="tour__title">Trendy Lara 5* Лара</h1>
+            <span class="tour__status">ТОП</span>
+            <span class="tour__country">Турция</span>
+            <span class="tour__stars">
+                <i class="tours__star"></i>
+                <i class="tours__star"></i>
+                <i class="tours__star"></i>
+                <i class="tours__star"></i>
+                <i class="tours__star"></i>
+            </span>
+        </header>
+        <div class="tour__details">
+            <div class="tour__photos">
+                <picture>
+                    <source type="image/webp" srcset="img/photo/photo-1@1x.webp 1x, img/photo/photo-1@2x.webp 2x">
+                    <img src="img/photo/photo-1@1x.jpg" srcset="img/photo/photo-1@1x.jpg 2x" alt="Trendy Lara 5* Лара" class="tour__photo tour__photo--main">
+                </picture>
+                <picture>
+                    <source type="image/webp" srcset="img/photo/photo-2@1x.webp 1x, img/photo/photo-2@2x.webp 2x">
+                    <img  alt="Trendy Lara 5* Лара" class="tour__photo tour__photo--main">
+                    <img src="img/photo/photo-2@1x.jpg" srcset="img/photo/photo-2@1x.jpg 2x" alt="Trendy Lara 5* Лара" class="tour__photo">
+                </picture>
+                <picture>
+                    <source type="image/webp" srcset="img/photo/photo-3@1x.webp 1x, img/photo/photo-3@2x.webp 2x">
+                    <img src="img/photo/photo-3@1x.jpg" srcset="img/photo/photo-3@1x.jpg 2x"  alt="Trendy Lara 5* Лара" class="tour__photo">
+                </picture>
+                <picture>
+                    <source type="image/webp" srcset="img/photo/photo-4@1x.webp 1x, img/photo/photo-4@2x.webp 2x">
+                    <img src="img/photo/photo-4@1x.jpg" srcset="img/photo/photo-4@1x.jpg 2x"  alt="Trendy Lara 5* Лара" class="tour__photo">
+                </picture>
+                <picture>
+                    <source type="image/webp" srcset="img/photo/photo-5@1x.webp 1x, img/photo/photo-5@2x.webp 2x">
+                    <img src="img/photo/photo-5@1x.jpg" srcset="img/photo/photo-5@1x.jpg 2x"  alt="Trendy Lara 5* Лара" class="tour__photo">
+                </picture>
+            </div>
+
+            <div class="tour__desc">
+                <div class="tour__info">
+                    <div class="tour__services services">
+                        <ul class="services__list">
+                            <li class="services__item  services__item--date">
+                                <i></i>
+                                <p class="services__title">Дата отправления:</p>
+                                <p class="services__value">27.05.2019 - <b>На 7 ночей</b></p>
+                            </li>
+                            <li class="services__item  services__item--route">
+                                <i></i>
+                                <p class="services__title">Маршрут:</p>
+                                <p class="services__value">Авиа из Киева</p>
+                            </li>
+                            <li class="services__item  services__item--breakfast">
+                                <i></i>
+                                <p class="services__title">Питание:</p>
+                                <p class="services__value">Завтрак включен</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tour__btns">
+                        <p class="tour__price">12 990 грн. <span>за 2х взрослых</span></p>
+                        <a href="#" class="btn btn--order">Заказать тур</a>
+                        <a href="#" class="btn btn--call">Перезвоните мне</a>
+                    </div>
+                </div>
+                <span class="tour__desc-title">Описание отеля</span>
+                <p class="tour__desc-text">
+                    Отель Trendy Lara расположен на курорте Лара, в 3,6 км от торгового центра Antalium Premium Lara/Kundu. К услугам гостей открытый бассейн, частный пляж, сауна, ресторан, инфраструктура для занятий водными видами спорта и бесплатная частная парковка на территории.
+
+                    Все номера оснащены телевизором с плоским экраном, а в некоторых есть гостиный уголок. Из окон части номеров открывается вид на море или сад. Гостям предоставляются купальные халаты, тапочки и фен. Во всех зонах действует бесплатный Wi-Fi.
+
+                    При отеле открыта парикмахерская.
+
+                    Желающие могут сыграть в теннис или настольный теннис, а также взять напрокат велосипед или автомобиль. Расстояние от отеля Trendy Lara до аэропорта города Анталья составляет 12 км.
+
+                    Парам особенно нравится расположение — они оценили проживание в этом районе для поездки вдвоем на 8,1.
+
+                    Здесь лучшее соотношение цены и качества в городе Лара! По сравнению с другими вариантами в этом городе, гости получают больше за те же деньги.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="comments">
+        <header class="comments__header">
+            <h3 class="comments__title">Комментарии</h3>
+        </header>
+        <ul class="comments__list">
+        </ul>
+
+        <div class="comments__add">
+            <span class="comments__add-title">
+                Добавить отзыв
+            </span>
+            <form action="#" class="comments__form">
+                <fieldset class="comments__point">
+                    <legend class="comments__point-title">Имя</legend>
+                    <input type="text" id="name" name="name" placeholder="Введите Ваше имя" class="comments__text">
+                </fieldset>
+                <fieldset class="comments__point">
+                    <legend class="comments__point-title">Отзыв</legend>
+                    <textarea name="message" id="message" class="comments__textarea" placeholder="Введите сообщение"></textarea>
+                </fieldset>
+                <input type="submit" class="btn btn--write" value="Отправить" id="comment-send">
+            </form>
+        </div>
+    </section>
+    <div class="hotel-map">
+        <b>Отель на карте</b>
+        <div class="hotel-map__content">
+            <div id="map"></div>
+        </div>
+    </div>
+</main>
+<footer class="main-footer">
+    <div class="main-footer__wrapper">
+            <span class="main-footer__bg-text">
+                Savix Tour
+            </span>
+        <div class="main-footer__logo logo">
+            <img src="./img/logo.png" alt="Savix">
+        </div>
+        <div class="main-footer__navigation navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item navigation__item--footer">
+                    <a href="#" class="navigation__link">Главная</a>
+                </li>
+                <li class="navigation__item navigation__item--footer">
+                    <a href="#" class="navigation__link">О нас</a>
+                </li>
+                <li class="navigation__item navigation__item--footer">
+                    <a href="#" class="navigation__link">Туры</a>
+                </li>
+                <li class="navigation__item navigation__item--footer">
+                    <a href="#" class="navigation__link">Контакты</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="main-footer__line">
+        <div class="main-footer__info info">
+            <article class="contacts">
+                <h4 class="contacts__title">Наши контакты</h4>
+                <ul class="contacts__list">
+                    <li class="contacts__item  contacts__item--phone"><a href="tel:+380666666666">+38 (066) 666-66-66</a></li>
+                    <li class="contacts__item  contacts__item--phone"><a href="tel:+380964425566">+38 (096) 442-55-66</a></li>
+                    <li class="contacts__item  contacts__item--email"><a href="mailto:info@sazixtour.ua">info@sazixtour.ua</a></li>
+                    <li class="contacts__item  contacts__item--point">ул. Ванды Василевского, 44</li>
+                </ul>
+            </article>
+            <article class="socials">
+                <h4 class="socials__title">Мы в соц. сетях</h4>
+                <ul class="socials__list">
+                    <li class="socials__item socials__item--fb"><a href="#" class="socials__link">Facebook</a></li>
+                    <li class="socials__item socials__item--inst"><a href="#" class="socials__link">Instagram</a></li>
+                    <li class="socials__item socials__item--yt"><a href="#" class="socials__link">YouTube</a></li>
+                    <li class="socials__item socials__item--tw"><a href="#" class="socials__link">Twitter</a></li>
+                </ul>
+            </article>
+            <article class="copyright">
+                <p class="copyright__text">Copyright © 2019 Savix Tour Company S.L.
+                    All rights reserved.</p>
+            </article>
+        </div>
+    </div>
+</footer>
+<script src="./scripts/main.js"></script>
+<script src="./scripts/getData.js"></script>
+<script>
+    function initMap() {
+        var coordinates = {lat: 36.861471, lng: 30.922676},
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                disableDefaultUI: true,
+                scrollwheel: false,
+                center: coordinates
+            });
+
+        var image = new google.maps.MarkerImage (
+            'img/icons/pointMap.svg',
+            null, /* size is determined at runtime */
+            null, /* origin is 0,0 */
+            null, /* anchor is bottom center of the scaled image */
+            new google.maps.Size(72,70)
+        )
+        marker = new google.maps.Marker({
+            position: coordinates,
+            map: map,
+            icon: image,
+            animation: google.maps.Animation.DROP
+        });
+
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrx5_FWtFL87bqu0vVCCFWEtS4iaEdC9g&callback=initMap"></script>
+</body>
+</html>
