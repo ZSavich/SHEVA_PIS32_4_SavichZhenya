@@ -8,11 +8,9 @@ function searchVisible() {
     search.classList.toggle('hidden');
 }
 
-
-
 navBtn.addEventListener('click', () => {
     navBtn.classList.toggle('navigation__toggle--active');
     navBtn.parentElement.classList.toggle('navigation--close');
     document.querySelector('.main-header--index').classList.toggle('main-header--active');
 });
-searchShow.addEventListener('click', () => {searchVisible()})
+searchShow.addEventListener('click', () => {searchVisible()});

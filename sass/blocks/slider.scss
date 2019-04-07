@@ -21,15 +21,24 @@
     transition: opacity .2s;
 
     &--first {
-      background-image: url("../../img/slider/slide-1@x1.jpg");
+      background-image: url("../img/slider/slide-1@x1.webp");
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/slider/slide-1@x2.webp");
+      }
     }
 
     &--second {
-      background-image: url("../../img/slider/slide-2@x1.jpg");
+      background-image: url("../img/slider/webp/slide-2@x1.webp");
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/slider/slide-2@x2.webp");
+      }
     }
 
     &--third {
-      background-image: url("../../img/slider/slide-3@x1.jpg");
+      background-image: url("../img/slider/webp/slide-3@x1.webp");
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/slider/slide-3@x2.webp");
+      }
     }
 
     &.hidden {
@@ -111,11 +120,29 @@
       opacity: 0.5;
       font-weight: 400;
     }
+
+    i {
+      font-style: normal;
+    }
   }
 }
 
 @media (max-width: $desktop) {
   .slider {
+
+    &__item {
+      &--first {
+        background-image: url("../../img/slider/slide-1-table@x1.webp");
+      }
+
+      &--second {
+        background-image: url("../../img/slider/slide-2-table@x1.webp");
+      }
+
+      &--third {
+        background-image: url("../../img/slider/slide-3-table@x1.webp");
+      }
+    }
 
     &__wrapper {
       min-width: $table;
@@ -131,6 +158,21 @@
     &::after {
       background-image: linear-gradient(to top, #0f364f 70%, rgba(15, 54, 79, 0.03) 100%)
     }
+
+    &__item {
+      &--first {
+        background-image: url("../../img/slider/slide-1-mobile@x1.webp");
+      }
+
+      &--second {
+        background-image: url("../../img/slider/slide-2-mobile@x1.webp");
+      }
+
+      &--third {
+        background-image: url("../../img/slider/slide-3-mobile@x1.webp");
+      }
+    }
+
 
     &__wrapper {
       min-width: $mobile;

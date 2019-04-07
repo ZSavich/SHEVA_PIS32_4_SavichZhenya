@@ -1,6 +1,6 @@
 .main-footer {
   background-color: $blue;
-  background-image: url("../img/footer-bg.jpg");
+  background-image: url("../img/footer-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -40,6 +40,12 @@
   &__line {
     border: 2px solid $orange;
     margin: 20px 0px;
+  }
+}
+
+@media (max-width: $desktop) {
+  .main-footer {
+    background-image: url("../img/footer-bg-table@1x.jpg");
   }
 }
 

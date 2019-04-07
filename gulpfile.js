@@ -9,21 +9,22 @@ const csso = require("gulp-csso");
 const del = require("del");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
 const svgmin = require("gulp-svgmin");
 const jsmin = require("gulp-jsmin");
 
 sass.compiler = require('node-sass');
 
 gulp.task("style", ()=>{
-    return gulp.src("sass/style.scss")/*
-        .pipe(plumber())*/
+    return gulp.src("sass/style.scss")
+        .pipe(plumber())
         .pipe(sass().on('error', sass.logError))
-        /*.pipe(autoprefixer())*/
+        .pipe(autoprefixer())
         .pipe(gulp.dest("./style/"))
-        //.pipe(gulp.dest("./build/style/"))
-        /*.pipe(csso())
-        .pipe(rename("style.min.css"))*/
-        //.pipe(gulp.dest("./build/style"))
+        .pipe(gulp.dest("./build/style/"))
+        .pipe(csso())
+        .pipe(rename("style.min.css"))
+        .pipe(gulp.dest("./build/style"))
         .on('end', server.reload)
 });
 
@@ -42,23 +43,25 @@ gulp.task("copyfonts", ()=>{
 });
 
 gulp.task("imagemin", ()=>{
-   return gulp.src("./photo/*")
+   return gulp.src("./img/**/*.{jpg,png}")
        .pipe(imagemin())
-       .pipe(gulp.dest("./build/photo"))
+       .pipe(gulp.dest("./build/img/"))
+       .pipe(webp())
+       .pipe(gulp.dest("./build/img/"))
 });
 
 gulp.task("svgmin", ()=>{
-    return gulp.src("./icons/*.svg")
+    return gulp.src("./img/icons/*.svg")
         .pipe(svgmin())
-        .pipe(gulp.dest("./build/icons"));
+        .pipe(gulp.dest("./build/img/icons"));
 });
 
 gulp.task("jsmin", function(){
     return gulp.src("./scripts/*.js")
-        /*.pipe(gulp.dest('./build/js'))*/
-        /*.pipe(jsmin())*/
-        /*.pipe(rename({suffix: '.min'}))*/
-        /*.pipe(gulp.dest("./build/js"))*/
+        .pipe(gulp.dest('./build/js'))
+        .pipe(jsmin())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest("./build/js"))
 });
 
 gulp.task("serve", gulp.series(gulp.parallel("style"), ()=>{

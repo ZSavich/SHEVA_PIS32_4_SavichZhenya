@@ -16,11 +16,13 @@
     padding: 20px 25px;
     background-color: white;
     margin-bottom: 40px;
+    justify-content: space-between;
   }
 
   &__user {
     flex-shrink: 0;
     padding-right: 30px;
+    max-width: 130px;
   }
 
   &__img {
@@ -28,6 +30,7 @@
     height: 100px;
     border-radius: 50%;
     overflow: hidden;
+    margin: 0 auto;
   }
 
   &__img {
@@ -42,6 +45,10 @@
   &__date {
     font-size: 14px;
     opacity: 0.5;
+  }
+
+  &__mess {
+    width: 100%;
   }
 
   &__add {
