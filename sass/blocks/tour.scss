@@ -148,7 +148,7 @@
     min-width: $mobile;
 
     &__photos {
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-around;
       align-items: center;
     }
