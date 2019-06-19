@@ -998,7 +998,7 @@ button {
 
 @media (max-width: 1200px) {
   .filter__form {
-    max-width: 50%;
+    max-width: 100%;
     margin: 0 auto;
     margin-bottom: 20px; }
   .filter__text {
@@ -1223,7 +1223,7 @@ button {
   .tour {
     min-width: 320px; }
     .tour__photos {
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-around;
       align-items: center; }
     .tour__photo {
